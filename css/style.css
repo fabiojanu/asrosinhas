@@ -122,3 +122,20 @@ img.animated.pulse {
 .hero-header .breadcrumb-item+.breadcrumb-item::before {
     color: var(--bs-light);
 }
+
+p {
+    font-size: large;
+}
+
+li{
+    font-size: large;
+}
+
+.rosinhaimg {
+    height: 30px;
+}
+
+.center {
+    align-items: center;
+    margin: auto;
+}
