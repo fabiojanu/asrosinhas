@@ -60,12 +60,36 @@ form.addEventListener('submit', e => {
         (pais.value !== '') &&
         tlm.classList.contains('is-valid') &&
         (nif.value !== '')){
+            sendEmail();
             showAlert('alert-success', 'Formulários enviado!');
             form.reset();
             allFormField.forEach(input => input.classList.remove('is-valid'))
         } else{
             showAlert('alert-danger', 'Por favor preenche todos os campos corretamente!');
         }
-}
+});
 
-)
+// Emailjs
+function sendEmail(){
+    let templateParams = {
+        from_nome: fullname.value,
+        from_sexo: sexo.value,
+        from_morada: morada.value,
+        from_postal: postal.value,
+        from_localidade: localidade.value,
+        from_pais: pais.value,
+        from_email: email.value,
+        from_tlm: tlm.value,
+        from_nif: nif.value,
+        from_data: data.value,
+      };
+      
+      emailjs.send('service_q50yrro', 'template_socio', templateParams).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+      );
+}
