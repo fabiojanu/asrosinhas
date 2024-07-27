@@ -64,10 +64,78 @@
 
 
     <!-- as rosinhas Start -->
-    <div id="sobre" class="container-fluid bg-light py-5">
+    <div id="associado" class="container-fluid bg-light py-5">
         <div class="container">
             <h1 class="text-center">Sendo Associado</h1>
-
+            <p class="text-primary">Junta-te a nós e torna-te sócio das Rosinhas. O valor da quota anual permitirá enviar gratuitamente mais Rosinhas a todas as mulheres que nos procuram.</p>
+            <p class="text-primary"><b>Quota anual: </b>24€</p>
+            <p class="text-primary">Preenche o formulário com os teus dados e serás contactado por email.</p>
+            <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                    <div class="col-md-8">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Coloque um nome válido.</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="sexo" class="form-label">Sexo</label>
+                        <select class="form-select" id="sexo">
+                            <option value="1" selected>Masculino</option>
+                            <option value="2">Feminino</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="morada" class="form-label">Morada</label>
+                        <input type="text" class="form-control" id="morada">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Coloque uma morada válida.</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="postal" class="form-label">Código Postal</label>
+                        <input type="text" class="form-control" id="postal">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Coloque um código postal válido.</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="localidade" class="form-label">Localidade</label>
+                        <input type="text" class="form-control" id="localidade">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Coloque uma localidade válida.</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="pais" class="form-label">País</label>
+                        <input type="text" class="form-control" id="pais">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Coloque um país válido.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Coloque um email válido.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="tlm" class="form-label">Telemóvel</label>
+                        <input type="tel" class="form-control" id="tlm">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Coloque um numero de telemóvel válido.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nif" class="form-label">NIF</label>
+                        <input type="number" class="form-control" id="nif">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Coloque um NIF válido.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="data" class="form-label">Data de nascimento</label>
+                        <input type="date" class="form-control" id="data">
+                    </div>
+                    <div class="d-grid col-md-4 mx-auto">
+                        <button type="submit" class="btn btn-primary">Ser Associado</button>
+                    </div>
+                </div>
+            </form>           
         </div>
     </div>
     <!-- as rosinhas End -->  
@@ -104,6 +172,18 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/socioapp.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "mKhwNxDwag1eyl1Lr",
+        });
+    })();
+    </script>
 </body>
 
 </html>
