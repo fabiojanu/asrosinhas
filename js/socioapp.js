@@ -84,7 +84,7 @@ function sendEmail(){
         from_data: data.value,
       };
       
-      emailjs.send('service_q50yrro', 'template_socio', templateParams).then(
+      emailjs.send('service_1kk6zrf', 'template_socio', templateParams).then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
         },

@@ -79,7 +79,7 @@ function sendEmail(){
         from_nif: nif.value,
       };
       
-      emailjs.send('service_q50yrro', 'template_doacao', templateParams).then(
+      emailjs.send('service_1kk6zrf', 'template_doacao', templateParams).then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
         },
