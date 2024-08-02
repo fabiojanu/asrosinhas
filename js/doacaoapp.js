@@ -11,7 +11,7 @@ const nif = document.getElementById('nif');
 const allFormField = document.querySelectorAll('.form-control');
 
 // REGEX
-const nameReg = /^[a-z ,.'-]+$/i;
+const nameReg = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/;
 const emailRegex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 const postalRegex = /^\d{4}-\d{3}?$/;
 const tlmRegex = /^[1-9][0-9]{0,3}$/;

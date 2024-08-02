@@ -13,7 +13,7 @@ const data = document.getElementById('data');
 const allFormField = document.querySelectorAll('.form-control');
 
 // REGEX
-const nameReg = /^[a-z ,.'-]+$/i;
+const nameReg = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/;
 const emailRegex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 const postalRegex = /^\d{4}-\d{3}?$/;
 const tlmRegex = /^9[1236]{1}[0-9]{7}$/;
