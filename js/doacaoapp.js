@@ -36,14 +36,15 @@ function checkInput(input, regex){
 
 // Alert
 function showAlert(type, message){
-    const alert = document.createElement('div');
+    //const alert = document.createElement('div');
+    const alert = document.getElementById('alerta');
     alert.classList.add('alert', type, 'alert-dismissible', 'fade', 'show', 'text-center');
     alert.setAttribute('role', 'alert');
     alert.innerHTML = message;
     containerPage.insertBefore(alert, form);
-    setTimeout(() => {
+    /*setTimeout(() => {
         document.querySelector('.alert').remove();
-    }, 1000);
+    }, 1000);*/
 }
 
 // Submit
@@ -58,7 +59,7 @@ form.addEventListener('submit', e => {
         valor.classList.contains('is-valid') &&
         (nif.value !== '')){
             sendEmail();
-            showAlert('alert-success', 'Formulários enviado!');
+            showAlert('alert-success', 'Formulário enviado!');
             form.reset();
             allFormField.forEach(input => input.classList.remove('is-valid'))
         } else{
