@@ -41,7 +41,7 @@ function showAlert(type, message){
     alert.classList.add('alert', type, 'alert-dismissible', 'fade', 'show', 'text-center');
     alert.setAttribute('role', 'alert');
     alert.innerHTML = message;
-    containerPage.insertBefore(alert, form);
+    //containerPage.insertBefore(alert, form);
     /*setTimeout(() => {
         document.querySelector('.alert').remove();
     }, 1000);*/
@@ -59,7 +59,7 @@ form.addEventListener('submit', e => {
         valor.classList.contains('is-valid') &&
         (nif.value !== '')){
             sendEmail();
-            showAlert('alert-success', 'Formulário enviado!');
+            showAlert('alert-success', 'Formulário enviado! Serás contactado(a) por email.');
             form.reset();
             allFormField.forEach(input => input.classList.remove('is-valid'))
         } else{
