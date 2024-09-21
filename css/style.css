@@ -228,3 +228,23 @@ li{
     color: var(--bs-white);
     background: var(--bs-primary);
 }
+
+/*** Eventos Page***/
+.evento{
+    margin-bottom: 50px;
+    padding: 25px;
+}
+
+.evento h1{
+    margin-bottom: 20px;
+}
+
+.evento video{
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+#merchandising .product-item{
+    background-color: white;
+}

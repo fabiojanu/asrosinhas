@@ -59,7 +59,7 @@ form.addEventListener('submit', e => {
         valor.classList.contains('is-valid') &&
         (nif.value !== '')){
             sendEmail();
-            showAlert('alert-success', 'Formulário enviado! Serás contactado(a) por email.');
+            showAlert('alert-success', 'Formulário enviado! Obrigado pelo teu contributo! Verifica o teu email, se não encontrares o nosso email verifica o spam.');
             form.reset();
             allFormField.forEach(input => input.classList.remove('is-valid'))
         } else{
