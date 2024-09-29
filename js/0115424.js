@@ -1,12 +1,12 @@
-const containerPage = document.getElementById('doador');
 const form = document.querySelector('form');
+const cor = document.getElementById('cor');
+const tamanho = document.getElementById('tamanho');
 const fullname = document.getElementById('name');
 const sexo = document.getElementById('email');
 const morada = document.getElementById('morada');
 const postal = document.getElementById('postal');
 const localidade = document.getElementById('localidade');
 const pais = document.getElementById('pais');
-const valor = document.getElementById('valor');
 const nif = document.getElementById('nif');
 const allFormField = document.querySelectorAll('.form-control');
 
@@ -20,7 +20,6 @@ const tlmRegex = /^[1-9][0-9]{0,3}$/;
 fullname.addEventListener('input', () => checkInput(fullname,nameReg));
 email.addEventListener('input', () => checkInput(email,emailRegex));
 postal.addEventListener('input', () => checkInput(postal,postalRegex));
-valor.addEventListener('input', () => checkInput(valor,tlmRegex));
 
 function checkInput(input, regex){
     const inputValue = input.value;
@@ -36,15 +35,10 @@ function checkInput(input, regex){
 
 // Alert
 function showAlert(type, message){
-    //const alert = document.createElement('div');
     const alert = document.getElementById('alerta');
     alert.classList.add('alert', type, 'alert-dismissible', 'fade', 'show', 'text-center');
     alert.setAttribute('role', 'alert');
     alert.innerHTML = message;
-    //containerPage.insertBefore(alert, form);
-    /*setTimeout(() => {
-        document.querySelector('.alert').remove();
-    }, 1000);*/
 }
 
 // Submit
@@ -56,10 +50,9 @@ form.addEventListener('submit', e => {
         postal.classList.contains('is-valid') &&
         (localidade.value !== '') &&
         (pais.value !== '') &&
-        valor.classList.contains('is-valid') &&
         (nif.value !== '')){
             sendEmail();
-            showAlert('alert-success', 'Formulário enviado! Obrigado pelo teu contributo! Verifica o teu email, se não encontrares o nosso email verifica o spam.');
+            showAlert('alert-success', 'Encomenda efetuado com sucesso! Obrigado pelo teu contributo! Verifica o teu email, se não encontrares o nosso email verifica o spam.');
             form.reset();
             allFormField.forEach(input => input.classList.remove('is-valid'))
         } else{
@@ -70,17 +63,20 @@ form.addEventListener('submit', e => {
 // Emailjs
 function sendEmail(){
     let templateParams = {
+        from_ref: '0115424',
+        from_cor: cor.value,
+        from_tamanho: tamanho.value,
         from_nome: fullname.value,
         from_morada: morada.value,
         from_postal: postal.value,
         from_localidade: localidade.value,
         from_pais: pais.value,
         from_email: email.value,
-        from_valor: valor.value,
+        from_valor: '€ 26.90',
         from_nif: nif.value,
       };
       
-      emailjs.send('service_1kk6zrf', 'template_doacao', templateParams).then(
+      emailjs.send('service_b0fgv3e', 'template_encomenda', templateParams).then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
         },

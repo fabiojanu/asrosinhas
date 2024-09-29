@@ -65,31 +65,64 @@
     <!-- Hero Start -->
     <div class="container-fluid bg-primary hero-header mb-5">
         <div class="container text-center">
-            <h1 class="display-4 text-white mb-3 animated slideInDown">Sendo Associado</h1>
+            <h1 class="display-4 text-white mb-3 animated slideInDown">Encomendar Soutien</h1>
         </div>
     </div>
     <!-- Hero End -->
 
     <!-- as rosinhas Start -->
-    <div id="associado" class="container-fluid bg-light py-5">
-        <div id="socio" class="container">
-            <p class="text-primary">Junta-te a nós e torna-te sócio(a) das Rosinhas. O valor da quota anual permitirá enviar gratuitamente mais Rosinhas a todas as mulheres que nos procuram.</p>
-            <p class="text-primary"><b>Quota anual: </b>24€</p>
-            <p class="text-primary">Preenche o formulário com os teus dados e receberás um email de confirmação. Se não receberes confirma a tua caixa de spam.</p>
+    <div class="container-fluid bg-light py-5">
+        <div class="container">
+            <p class="h6 text-primary mb-5">Escolhe a cor e o tamanho pretendido, preenche o formulário com os teus dados e receberás um email de confirmação. Se não receberes o email confirma a tua caixa de spam.</p>
             <form class="needs-validation" novalidate>
                 <div class="row g-3">
-                    <div class="col-md-8">
+                    <div class="col-md-3">
+                        <img class="img-fluid mb-4" src="img/Soutiens/soutien2.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <p class="h6 mb-2">Ref: 0118703</p>
+                        <p class="text-primary mb-2">Soutien moldado para prótese em algodão, forrado a laize.</p>
+                        <p class="h6 mb-2">€ 25.90</p>
+                        <label for="cor" class="form-label mb-2">Cor</label>
+                        <select class="form-select mb-2" id="cor">
+                            <option value="natural" selected>Natural</option>
+                        </select>
+                        <label for="tamanho" class="form-label mb-2">Tamanho</label>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            &#9432 Tabela de tamanhos
+                        </button>
+                        <select class="form-select" id="tamanho">
+                            <option value="B32" selected>B32</option>
+                            <option value="B34">B34</option>
+                            <option value="B36">B36</option>
+                            <option value="B38">B38</option>
+                            <option value="B40">B40</option>
+                            <option value="B42">B42</option>
+                            <option value="B44">B44</option>
+                            <option value="C32">C32</option>
+                            <option value="C34">C34</option>
+                            <option value="C36">C36</option>
+                            <option value="C38">C38</option>
+                            <option value="C40">C40</option>
+                            <option value="C42">C42</option>
+                            <option value="D32">D32</option>
+                            <option value="D34">D34</option>
+                            <option value="D36">D36</option>
+                            <option value="D38">D38</option>
+                            <option value="D40">D40</option>
+                        </select>
+                    </div>                     
+                    <div class="col-md-12">
                         <label for="name" class="form-label">Nome</label>
                         <input type="text" class="form-control" id="name">
                         <div class="valid-feedback"></div>
                         <div class="invalid-feedback">Coloque um nome válido.</div>
                     </div>
-                    <div class="col-md-4">
-                        <label for="sexo" class="form-label">Sexo</label>
-                        <select class="form-select" id="sexo">
-                            <option value="masculino" selected>Masculino</option>
-                            <option value="feminino">Feminino</option>
-                        </select>
+                    <div class="col-md-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Coloque um email válido.</div>
                     </div>
                     <div class="col-md-12">
                         <label for="morada" class="form-label">Morada</label>
@@ -115,30 +148,19 @@
                         <div class="valid-feedback"></div>
                         <div class="invalid-feedback">Coloque um país válido.</div>
                     </div>
-                    <div class="col-md-6">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email">
-                        <div class="valid-feedback"></div>
-                        <div class="invalid-feedback">Coloque um email válido.</div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="tlm" class="form-label">Telemóvel</label>
-                        <input type="tel" class="form-control" id="tlm">
-                        <div class="valid-feedback"></div>
-                        <div class="invalid-feedback">Coloque um numero de telemóvel válido.</div>
-                    </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <label for="nif" class="form-label">NIF</label>
                         <input type="number" class="form-control" id="nif">
                         <div class="valid-feedback"></div>
                         <div class="invalid-feedback">Coloque um NIF válido.</div>
                     </div>
-                    <div class="col-md-6">
-                        <label for="data" class="form-label">Data de nascimento</label>
-                        <input type="date" class="form-control" id="data">
-                    </div>
+                    <p class="text-primary small">Politica de devolução:</br>
+                        Todos os artigos podem ser trocados nos primeiros 14 dias após o recebimento da encomenda. Os custos do envio para troca são assegurados pelo cliente.</br>
+                        Todos os artigos só serão aceites em perfeitas condições (sem uso, marcas, manchas, odores, e com etiquetas).</br>
+                        No caso de ter alguma dúvida  entre em contacte connosco  através das nossas redes sociais ou do e-mail: <a href="mailto:info@asrosinhas.org">info@asrosinhas.org</a>
+                    </p>
                     <div class="d-grid col-md-4 mx-auto">
-                        <button type="submit" class="btn btn-primary">Ser Associado</button>
+                        <button type="submit" class="btn btn-primary">Fazer Encomenda</button>
                     </div>
                 </div>
             </form> 
@@ -146,6 +168,22 @@
         </div>
     </div>
     <!-- as rosinhas End -->  
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Tabela de Tamanhos</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid" src="img/Soutiens/tamanhos.jpg" alt="">
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Start -->
     <div class="container-fluid footer">
@@ -179,7 +217,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/socioapp.js"></script>
+    <script src="js/0118703.js"></script>
 
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -187,7 +225,7 @@
     <script type="text/javascript">
     (function(){
         emailjs.init({
-            publicKey: "mKhwNxDwag1eyl1Lr",
+            publicKey: "FsTIIwFusPX2et7D9",
         });
     })();
     </script>
