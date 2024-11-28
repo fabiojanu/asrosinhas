@@ -64,6 +64,7 @@ form.addEventListener('submit', e => {
 function sendEmail(){
     let templateParams = {
         from_ref: '0118702',
+        from_artigo: 'Soutien',
         from_cor: cor.value,
         from_tamanho: tamanho.value,
         from_nome: fullname.value,
