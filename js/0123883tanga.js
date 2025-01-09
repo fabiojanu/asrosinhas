@@ -1,6 +1,8 @@
 const form = document.querySelector('form');
 const cor = document.getElementById('cor');
 const tamanho = document.getElementById('tamanho');
+const cortanga = document.getElementById('cortanga');
+const tamanhotanga = document.getElementById('tamanhotanga');
 const fullname = document.getElementById('name');
 const sexo = document.getElementById('email');
 const morada = document.getElementById('morada');
@@ -81,20 +83,22 @@ form.addEventListener('submit', e => {
 function sendEmail(){
     let templateParams = {
         from_ref: '0123883',
-        from_artigo: 'Soutien',
         from_cor: cor.value,
         from_tamanho: tamanho.value,
+        from_reftanga: '0323883',
+        from_cortanga: cortanga.value,
+        from_tamanhotanga: tamanhotanga.value,
         from_nome: fullname.value,
         from_morada: morada.value,
         from_postal: postal.value,
         from_localidade: localidade.value,
         from_pais: pais.value,
         from_email: email.value,
-        from_valor: '€ 32.50',
+        from_valor: '€ 41.50',
         from_nif: nif.value,
       };
       
-      emailjs.send('service_b0fgv3e', 'template_encomenda', templateParams).then(
+      emailjs.send('service_b0fgv3e', 'template_encomenda2', templateParams).then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
         },
