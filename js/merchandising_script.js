@@ -34,6 +34,9 @@ function changeimage(input){
         else if (cor.value == "preta"){
             input.src = "img/Merchandising/tshirt-preta.jpg";
         }
+        else if (cor.value == "rosa"){
+            input.src = "img/Merchandising/tshirt-rosa.jpg";
+        }        
     }
     else if (reference.textContent == "T-shirt Cintada"){
         if (cor.value == "branca"){
@@ -42,6 +45,9 @@ function changeimage(input){
         else if (cor.value == "preta"){
             input.src = "img/Merchandising/tshirt-preta.jpg";
         }
+        else if (cor.value == "rosa"){
+            input.src = "img/Merchandising/tshirt-rosa.jpg";
+        }         
     }
     else if (reference.textContent == "Sweatshirt"){
         if (cor.value == "branca"){
