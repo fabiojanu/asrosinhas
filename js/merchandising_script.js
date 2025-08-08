@@ -24,6 +24,7 @@ fullname.addEventListener('input', () => checkInput(fullname,nameReg));
 email.addEventListener('input', () => checkInput(email,emailRegex));
 postal.addEventListener('input', () => checkInput(postal,postalRegex));
 cor.addEventListener('change', () => changeimage(image));
+tamanho.addEventListener('change', () => changeimage2(image));
 
 function changeimage(input){
     if (reference.textContent == "T-shirt"){
@@ -63,7 +64,35 @@ function changeimage(input){
         else if (cor.value == "rosa"){
             input.src = "img/Merchandising/camisola-rosa.jpg";
         }
-    }     
+    }  
+    else if (reference.textContent == "Boné"){
+        if (cor.value == "rosa"){
+            input.src = "img/Merchandising/bone-rosa.jpg";
+        }
+        else if (cor.value == "preto"){
+            input.src = "img/Merchandising/bone-preto.jpg";
+        }
+    }       
+}
+
+function changeimage2(input){
+    if (reference.textContent == "Brinco"){
+        if (tamanho.value == "torcido"){
+            input.src = "img/Merchandising/brinco-torcido.jpg";
+        }
+        else if (tamanho.value == "concha"){
+            input.src = "img/Merchandising/brinco-concha.jpg";
+        }
+        else if (tamanho.value == "teia"){
+            input.src = "img/Merchandising/brinco-teia.jpg";
+        }
+        else if (tamanho.value == "nuvem"){
+            input.src = "img/Merchandising/brinco-nuvem.jpg";
+        }
+        else if (tamanho.value == "flor"){
+            input.src = "img/Merchandising/brinco-flor.jpg";
+        }                        
+    }
 }
 
 function checkInput(input, regex){
@@ -107,6 +136,10 @@ form.addEventListener('submit', e => {
 
 // Emailjs
 function sendEmail(){
+    if (reference.textContent == "Brinco"){
+        reference.textContent = `Brinco - ${tamanho.value}`;
+        tamanho.value = "unico";
+    };
     let templateParams = {
         from_ref: reference.textContent,
         from_artigo: 'Merchandising',
