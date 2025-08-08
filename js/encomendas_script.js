@@ -9,6 +9,9 @@ const localidade = document.getElementById('localidade');
 const pais = document.getElementById('pais');
 const nif = document.getElementById('nif');
 const allFormField = document.querySelectorAll('.form-control');
+const image = document.getElementById("soutienImage");
+const reference = document.getElementById("reference");
+const price = document.getElementById("price");
 
 // REGEX
 const nameReg = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/;
@@ -20,6 +23,24 @@ const tlmRegex = /^[1-9][0-9]{0,3}$/;
 fullname.addEventListener('input', () => checkInput(fullname,nameReg));
 email.addEventListener('input', () => checkInput(email,emailRegex));
 postal.addEventListener('input', () => checkInput(postal,postalRegex));
+cor.addEventListener('change', () => changeimage(image));
+
+function changeimage(input){
+    if (reference.textContent == "0123883"){
+        if (cor.value == "natural"){
+            input.src = "img/Soutiens/soutien6-natural.jpg";
+        }
+        else if (cor.value == "vison"){
+            input.src = "img/Soutiens/soutien6-vison.jpg";
+        }
+        else if (cor.value == "preto"){
+            input.src = "img/Soutiens/soutien6-preto.jpg";
+        }
+        else if (cor.value == "vermelho"){
+            input.src = "img/Soutiens/soutien6-vermelho.jpg";
+        }
+    }
+}
 
 function checkInput(input, regex){
     const inputValue = input.value;
@@ -63,7 +84,7 @@ form.addEventListener('submit', e => {
 // Emailjs
 function sendEmail(){
     let templateParams = {
-        from_ref: '01ROS04',
+        from_ref: reference.textContent,
         from_artigo: 'Soutien',
         from_cor: cor.value,
         from_tamanho: tamanho.value,
@@ -73,7 +94,7 @@ function sendEmail(){
         from_localidade: localidade.value,
         from_pais: pais.value,
         from_email: email.value,
-        from_valor: '€ 35.00',
+        from_valor: price.textContent,
         from_nif: nif.value,
       };
       

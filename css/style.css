@@ -90,6 +90,11 @@ img.animated.pulse {
     background-size: cover;
 }
 
+.hero-header-main h3 {
+    color: #fff;
+    padding-top: 50dvh;
+}
+
 @media (max-width: 991.98px) {
     .hero-header-main {
         position: relative;
@@ -101,6 +106,7 @@ img.animated.pulse {
         background: url(../img/1080_1920.png) center center no-repeat;
         background-size: cover;
     }
+}
 }
 
 .hero-header-main::before {
