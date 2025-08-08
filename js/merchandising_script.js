@@ -26,20 +26,44 @@ postal.addEventListener('input', () => checkInput(postal,postalRegex));
 cor.addEventListener('change', () => changeimage(image));
 
 function changeimage(input){
-    if (reference.textContent == "0123883"){
-        if (cor.value == "natural"){
-            input.src = "img/Soutiens/soutien6-natural.jpg";
+    if (reference.textContent == "T-shirt"){
+        if (cor.value == "branca"){
+            input.src = "img/Merchandising/tshirt-branca.jpg";
         }
-        else if (cor.value == "vison"){
-            input.src = "img/Soutiens/soutien6-vison.jpg";
-        }
-        else if (cor.value == "preto"){
-            input.src = "img/Soutiens/soutien6-preto.jpg";
-        }
-        else if (cor.value == "vermelho"){
-            input.src = "img/Soutiens/soutien6-vermelho.jpg";
+        else if (cor.value == "preta"){
+            input.src = "img/Merchandising/tshirt-preta.jpg";
         }
     }
+    else if (reference.textContent == "T-shirt Cintada"){
+        if (cor.value == "branca"){
+            input.src = "img/Merchandising/tshirt-branca.jpg";
+        }
+        else if (cor.value == "preta"){
+            input.src = "img/Merchandising/tshirt-preta.jpg";
+        }
+    }
+    else if (reference.textContent == "Sweatshirt"){
+        if (cor.value == "branca"){
+            input.src = "img/Merchandising/sweat-branco.jpg";
+        }
+        else if (cor.value == "preta"){
+            input.src = "img/Merchandising/sweat-preto.jpg";
+        }
+        else if (cor.value == "rosa"){
+            input.src = "img/Merchandising/sweat-rosa.jpg";
+        }
+        else if (cor.value == "cinza"){
+            input.src = "img/Merchandising/sweat-cinza.jpg";
+        }
+    }   
+    else if (reference.textContent == "Camisola"){
+        if (cor.value == "rosaClaro"){
+            input.src = "img/Merchandising/camisola-rosaC.jpg";
+        }
+        else if (cor.value == "rosa"){
+            input.src = "img/Merchandising/camisola-rosa.jpg";
+        }
+    }     
 }
 
 function checkInput(input, regex){
